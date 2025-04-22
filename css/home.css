@@ -1,0 +1,179 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e3f7ff;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Header Styling */
+
+/* Horizontal Line */
+hr {
+    border: none;
+    height: 4px;
+    background: #007bff;
+    width: 50%;
+    margin: 20px auto;
+}
+
+
+/* Navigation Bar */
+nav {
+    background-color: #007bff;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: background 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    background-color: #0056b3;
+    border-radius: 5px;
+}
+
+/* Text Effects */
+/* Shake Effect */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+.shake {
+    display: inline-block;
+    animation: shake 0.3s infinite;
+}
+
+/* Fade-in Effect */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Text Glow Effect */
+.glow {
+    text-shadow: 0 0 10px red, 0 0 20px orange;
+}
+
+/* Smooth Hover Effect */
+.smooth-hover:hover {
+    color: #ff5733;
+    transition: color 0.3s ease-in-out;
+}
+
+
+/* Headers */
+
+h1 {
+    /* transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%; */
+    font-size: 38px;
+    /* animation: bounce 2s  1;
+    transform: translate(0%, 0%); */
+}
+
+h2 {
+    font-size: 24px;
+    text-align: left;
+}
+
+h3 {
+    font-size: 18px;
+    text-align: left;
+}
+
+/* Spans */
+.ques {
+    color: #97c92a;
+}
+
+.ans::before {
+    content: "➜"; /* Adds a bullet point before the answer */
+    font-weight: bold;
+    color: #3300ff;
+    padding-right: 5px;
+}
+
+
+
+.owner {
+    color: #e0ad03
+}
+
+
+@keyframes bounce {
+    0% { transform: translateY(-30px); opacity: 0; }
+    50% { transform: translateY(10px); opacity: 1; }
+    100% { transform: translateY(0); opacity: 1;}
+}
+
+/* .first {
+    display: inline-block;
+    animation: bounce 0.8s ease-in-out forwards;
+    animation-delay: 0.8s;
+}
+
+.second {
+    display: inline-block;
+    animation: bounce 0.8s ease-in-out forwards;
+    animation-delay: 0.8s;
+}
+
+.third {
+    animation-delay: 1.6s;
+    display: inline-block;
+    animation: bounce 0.8s ease-in-out forwards;
+} */
+
+/* Apply bounce effect sequentially */
+.first {
+    display: inline-block;
+    opacity: 0; /* Start hidden */
+    animation: bounce 0.8s ease-in-out forwards;
+    animation-delay: 0s;
+}
+
+
+.second {
+    display: inline-block;
+    opacity: 0;
+    color: #ebba34;
+    font-weight: bold;
+    animation: bounce 0.8s ease-in-out forwards;
+    animation-delay: 0.8s; /* Delayed after .first */
+}
+
+.third {
+    display: inline-block;
+    opacity: 0;
+    animation: bounce 0.8s ease-in-out forwards;
+    animation-delay: 1.6s; /* Delayed after .second */
+}
